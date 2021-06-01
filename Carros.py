@@ -44,8 +44,10 @@ class ClaseCarros:
 			estacionado = int(input("Digite 1 para estacionarlo:"))
 			if estacionado==1:
 				print("Automovil ha sido parqueado xD")
+				pausa = input("\nPresione enter para continuar")
 			else:
 				print("El automovil no está estacionado")
+				pausa = input("\nPresione enter para continuar")
 		else:
 			print("El automovil ya esta estacionado")
 	pausa = input("\nPresione enter para continuar")
@@ -93,14 +95,16 @@ class Bombero(ClaseCarros):
 		pausa = input("\nPresione enter para continuar")
 	
 #Funciones
-# function to check whether the list is empty or not
+# Funcion para conocer si existen registros
 def listaVacia(list):
-    # checking the length
+    # verificando si hay contenido
     if len(list) == 0:
-        # returning true as length is 0
+        # retorna True si no hay elementos
         return True
-    # returning false as length is greater than 0
+    # retorna Fals si hay elementos
     return False
+
+#Funcion Registro		
 def RegistroCarrro(tipo):
 	print("\n")
 	print("-------------------------")
@@ -125,7 +129,7 @@ def RegistroCarrro(tipo):
 		ObjCarro = Bombero (modelo, color, motor, asiento, marca, puertas, combustible, placa, estacionado)
 		listaCarros.append(ObjCarro)
 
-
+#Funcion Mostrar todos los carros registrados
 def MostrarCarros():
 	comprobacion = listaVacia(listaCarros)
 	if comprobacion == False:
@@ -135,6 +139,7 @@ def MostrarCarros():
 		print("No se ha registrado ningun automovil")
 		pausa = input("\nPresione enter para continuar")
 
+#Funcion Mostrar info de un auto en especifico
 def InfoCarro():
 	comprobacion = listaVacia(listaCarros)
 	if comprobacion == False:
@@ -146,7 +151,7 @@ def InfoCarro():
 		print("No se ha registrado ningun automovil")
 		pausa = input("\nPresione enter para continuar")
 
-
+#Funcion de llenar el tanque
 def LlenarTanque():
 	comprobacion = listaVacia(listaCarros)
 	if comprobacion == False:
@@ -166,7 +171,7 @@ def LlenarTanque():
 		print("No se ha registrado ningun automovil")
 		pausa = input("\nPresione enter para continuar")
 
-
+#Funcion de parquear el auto xD 
 def ParquearAutomovil():
 	comprobacion = listaVacia(listaCarros)
 	if comprobacion == False:
